@@ -615,7 +615,7 @@
             
             const ts = getArchiveTimestamp();
             const sheetName = `Panitia ${window.state.activeNpsn}`.substring(0, 31);
-            const fileName = `Ekspor Panitia KONKERKAB ${window.state.activeNpsn} ${ts}.xlsx`;
+            const fileName = `Edi Brata Data Administrasi KONKERKAB-1 ${window.state.activeNpsn} ${ts}.xlsx`;
             
             const EXCEL_LIMIT = 32000;
 
@@ -843,7 +843,7 @@
                     <div class="w-14 h-14 bg-slate-300 rounded-lg flex items-center justify-center text-white shadow-xl transform transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer overflow-hidden border border-slate-200">
                         <img src="https://raw.githubusercontent.com/edibrata/image/main/FotoEdiBrata.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="text-slate-900"><h1 class="font-extrabold text-lg leading-none uppercase">PANITIA KONKERKAB 1</h1><p class="text-[12px] font-bold tracking-widest leading-tight">Administrasi Panitia Pelaksana<br><span class="text-red-800">By Edi Brata</span></p></div>
+                    <div class="text-slate-900"><h1 class="font-extrabold text-lg leading-none uppercase">PGRI KABUPATEN PANDEGLANG</h1><p class="text-[12px] font-bold tracking-widest leading-tight">Konferensi Kerja 1 Masa Bakti XXIII Periode 2025-2030<br><span class="text-red-800">By Edi Brata</span></p></div>
                 </div>
                 <nav class="flex gap-2 bg-slate-100 p-1 rounded-xl overflow-x-auto max-w-[50%] md:max-w-none no-scrollbar">
                     <button onclick="switchTab('dashboard')" data-tab="dashboard" class="tab-btn px-4 md:px-6 py-2.5 rounded-xl bg-red-premium text-white shadow-lg btn-interact whitespace-nowrap">Beranda</button>
@@ -942,7 +942,7 @@
             <section id="formulir" class="tab-content hidden max-w-4xl mx-auto pb-10">
                 <form id="form-main" onsubmit="window.handleProcessData(event)" class="space-y-6">
                     <div id="form-ii-pelaksanaan" class="bg-white p-10 rounded-xl shadow-sm border space-y-8 hover-lift">
-                        <h4 class="text-red-800 font-black text-lg uppercase tracking-tight border-b pb-5">I. Detail Agenda Panitia Konkerkab</h4>
+                        <h4 class="text-red-800 font-black text-lg uppercase tracking-tight border-b pb-5">I. Detail Agenda</h4>
                         <div><label>Judul / Perihal Kegiatan</label><input type="text" name="nama_kegiatan" placeholder="CONTOH: RAPAT PANITIA..." class="font-bold text-xl text-red-900 focus:border-red-800"></div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div><label>Tgl Pengesahan KAK</label><input type="date" name="tanggal_kak" class="!bg-red-50/30"></div>
@@ -965,17 +965,17 @@
                     </div>
 
                     <div class="bg-white p-10 rounded-xl shadow-sm border space-y-6 hover-lift">
-                        <h4 class="text-red-800 font-black text-lg uppercase tracking-tight border-b pb-5">II. Jadwal Acara Panitia</h4>
+                        <h4 class="text-red-800 font-black text-lg uppercase tracking-tight border-b pb-5">II. Jadwal Acara</h4>
                         <div class="flex flex-col md:flex-row gap-4 p-6 bg-red-50/20 rounded-xl border border-red-100">
                             <div class="w-full md:w-48"><label>Waktu</label><input type="text" id="input-waktu" placeholder="08.00 - 09.00"></div>
-                            <div class="flex-grow"><label>Agenda / Pembahasan</label><input type="text" id="input-kegiatan" placeholder="Uraian kegiatan panitia..."></div>
+                            <div class="flex-grow"><label>Agenda/Pembahasan</label><input type="text" id="input-kegiatan" placeholder="Uraian kegiatan panitia..."></div>
                             <div class="flex items-end"><button type="button" onclick="window.addJadwalItem()" class="bg-red-premium text-white h-[46px] px-8 rounded-xl font-black shadow-lg shadow-red-200 btn-interact">+</button></div>
                         </div>
                         <div id="jadwal-list" class="mt-4"></div>
                     </div>
 
                     <div class="bg-white p-10 rounded-xl shadow-sm border space-y-6 hover-lift">
-                        <h4 class="text-red-800 font-black text-lg uppercase tracking-tight border-b pb-5">III. Dokumentasi Panitia</h4>
+                        <h4 class="text-red-800 font-black text-lg uppercase tracking-tight border-b pb-5">III. Dokumentasi</h4>
                         <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-6">
                             <div class="flex gap-4">
                                 <div class="flex-grow"><label>Tambah Foto (URL)</label><input type="text" id="input-foto-link" placeholder="Tautan dokumentasi panitia..."></div>
@@ -987,7 +987,7 @@
                     </div>
 
                     <div class="bg-white p-10 rounded-xl shadow-sm border space-y-6 hover-lift">
-                        <h4 class="text-red-800 font-black text-lg uppercase tracking-tight border-b pb-5">IV. Deskripsi Administrasi Panitia</h4>
+                        <h4 class="text-red-800 font-black text-lg uppercase tracking-tight border-b pb-5">IV. Deskripsi</h4>
                         <div><label>Narasi Perencanaan Panitia (KAK)</label><textarea name="kak_narasi" rows="8" placeholder="Deskripsikan perencanaan teknis panitia di sini..."></textarea></div>
                         <div><label>Risalah Rapat / Hasil Agenda (Notulensi)</label><textarea name="notulen_narasi" rows="8" placeholder="Ketikkan poin-poin hasil pembahasan rapat di sini..."></textarea></div>
                         <div><label>Kesimpulan & Evaluasi Panitia (Laporan)</label><textarea name="laporan_narasi" rows="8" placeholder="Ketikkan kesimpulan pelaksanaan panitia di sini..."></textarea></div>
